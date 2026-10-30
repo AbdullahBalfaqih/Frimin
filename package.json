@@ -1,0 +1,62 @@
+{
+  "name": "frimin",
+  "version": "2.0.0",
+  "license": "MIT",
+  "author": "Abdullah Balfaqih <https://github.com/AbdullahBalfaqih>",
+  "description": "Autonomous market-evidence interpreter, 20-voice narrative convergence engine, and Level-2 practice trading desk with SHA-256 hash-chained, Ed25519-signed SQLite audit trails and deterministic replay.",
+  "homepage": "https://github.com/AbdullahBalfaqih/Frimin#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AbdullahBalfaqih/Frimin.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AbdullahBalfaqih/Frimin/issues"
+  },
+  "keywords": [
+    "autonomous-agents",
+    "algorithmic-trading",
+    "paper-trading",
+    "orderbook",
+    "cryptography",
+    "ed25519",
+    "sha256",
+    "audit-trail",
+    "ethereum",
+    "solana",
+    "sqlite",
+    "nextjs",
+    "typescript",
+    "dorahacks"
+  ],
+  "scripts": {
+    "dev": "next dev -H 0.0.0.0 -p 3000",
+    "build": "next build",
+    "start": "next start -H 0.0.0.0 -p 3000",
+    "cycle": "tsx scripts/cli.ts cycle",
+    "verify": "tsx scripts/cli.ts verify",
+    "replay": "tsx scripts/cli.ts replay",
+    "test": "tsx --test tests/engine.test.ts"
+  },
+  "dependencies": {
+    "better-sqlite3": "^12.8.0",
+    "cheerio": "^1.2.0",
+    "fast-xml-parser": "^5.5.3",
+    "lucide-react": "^0.468.0",
+    "next": "^14.2.21",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "technicalindicators": "^3.1.0",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/node": "^20.17.10",
+    "@types/react": "^18.3.17",
+    "@types/react-dom": "^18.3.5",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.17",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}

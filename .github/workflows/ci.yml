@@ -1,0 +1,31 @@
+name: Frimin Verification Suite
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  verify-and-build:
+    name: Unit, Cryptographic & Production Build Verification
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run unit, Level-2 orderbook & Ed25519 tamper test suite
+        run: npm test
+
+      - name: Verify Next.js production compilation & TypeScript types
+        run: npm run build
